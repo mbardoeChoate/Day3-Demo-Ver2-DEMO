@@ -1,6 +1,8 @@
+import random
 
 def friend():
     prompt="Hello"
+    other_responseses=["Interesting", "Okay", "That's true, sometimes."]
     while True:
         my_text=input(prompt+": ")
         responses ={"Hello" : "How are you?",
@@ -9,7 +11,7 @@ def friend():
         if my_text in responses.keys():
             prompt=responses[my_text]
         else:
-            prompt="Interesting"
+            prompt=random.choice(other_responseses)
 
 
 if __name__ == '__main__':
