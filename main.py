@@ -1,15 +1,17 @@
 
-def friend(my_text):
-
-    responses ={"Hello" : "How are you?",
-                "Fine" : "Wow, me too.",
-                "I have to go.": "I will miss you"}
-    if my_text in responses.keys():
-        print(responses[my_text])
-    else:
-        print("Interesting")
+def friend():
+    prompt="Hello"
+    while True:
+        my_text=input(prompt+": ")
+        responses ={"Hello" : "How are you?",
+                    "Fine" : "Wow, me too.",
+                    "I have to go.": "I will miss you"}
+        if my_text in responses.keys():
+            prompt=responses[my_text]
+        else:
+            prompt="Interesting"
 
 
 if __name__ == '__main__':
-    friend("Hello")
+    friend()
 
